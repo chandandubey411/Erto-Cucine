@@ -184,8 +184,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-charcoal-900 text-white overflow-y-auto transition-transform duration-300 ease-in-out lg:hidden ${
-          mobileOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 z-40 bg-charcoal-900 text-white overflow-y-auto transition-all duration-300 ease-in-out lg:hidden ${
+          mobileOpen ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible pointer-events-none'
         }`}
       >
         <div className="p-6 pt-20">

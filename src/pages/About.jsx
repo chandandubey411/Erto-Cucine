@@ -73,10 +73,10 @@ export default function About() {
             <div data-aos="fade-left">
               <div className="relative">
                 <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Erto Cucine manufacturing" className="w-full h-96 lg:h-[500px] object-cover" />
-                <div className="absolute -bottom-6 -left-6 w-48 h-32 bg-gold-500 flex items-center justify-center text-center p-4">
+                <div className="absolute -bottom-4 left-4 lg:-bottom-6 lg:-left-6 w-40 sm:w-48 h-28 sm:h-32 bg-gold-500 flex items-center justify-center text-center p-4">
                   <div>
-                    <p className="font-playfair text-3xl font-bold text-charcoal-900">15+</p>
-                    <p className="text-xs text-charcoal-700 uppercase tracking-wider">Years of Excellence</p>
+                    <p className="font-playfair text-2xl sm:text-3xl font-bold text-charcoal-900">15+</p>
+                    <p className="text-[10px] sm:text-xs text-charcoal-700 uppercase tracking-wider">Years of Excellence</p>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div data-aos="fade-up" className="p-10 bg-charcoal-900 text-white">
+            <div data-aos="fade-up" className="p-6 sm:p-10 bg-charcoal-900 text-white">
               <div className="text-gold-400 text-3xl mb-4">🎯</div>
               <h2 className="font-playfair text-2xl font-bold text-white mb-4">Our Mission</h2>
               <div className="gold-divider mb-4" />
@@ -147,7 +147,7 @@ export default function About() {
                 To deliver premium modular interior solutions that transform Indian homes through exceptional design, uncompromising material quality, and personalised service — making every customer feel that their space is truly special.
               </p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100" className="p-10 bg-gold-500">
+            <div data-aos="fade-up" data-aos-delay="100" className="p-6 sm:p-10 bg-gold-500">
               <div className="text-charcoal-900 text-3xl mb-4">🔭</div>
               <h2 className="font-playfair text-2xl font-bold text-charcoal-900 mb-4">Our Vision</h2>
               <div className="w-16 h-0.5 bg-charcoal-900/30 mb-4" />
