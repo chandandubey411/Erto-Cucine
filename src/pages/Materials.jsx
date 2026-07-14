@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import CTA from '../components/CTA/CTA';
@@ -33,12 +32,10 @@ export default function Materials() {
 
           <div className="space-y-8">
             {materials.map((mat, i) => (
-              <motion.div
+              <div
                 key={mat.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-beige-200 ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
                 <div className={`${i % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -67,7 +64,7 @@ export default function Materials() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -77,3 +74,4 @@ export default function Materials() {
     </>
   );
 }
+

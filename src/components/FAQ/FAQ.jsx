@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
 export default function FAQAccordion({ faqs, title = 'Frequently Asked Questions' }) {
@@ -29,24 +28,21 @@ export default function FAQAccordion({ faqs, title = 'Frequently Asked Questions
                 {open === i ? <FiMinus className="w-4 h-4" /> : <FiPlus className="w-4 h-4" />}
               </span>
             </button>
-            <AnimatePresence initial={false}>
-              {open === i && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  className="overflow-hidden"
-                >
-                  <p className="pb-5 text-muted text-sm leading-relaxed pr-12">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <div
+              className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
+                open === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <p className="pb-5 text-muted text-sm leading-relaxed pr-12">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
 }
+

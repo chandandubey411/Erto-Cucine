@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiCalendar, FiCheck } from 'react-icons/fi';
@@ -45,7 +44,7 @@ export default function BookConsultation() {
   if (done) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-beige-50 pt-20 px-4">
-        <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-md">
+        <div className="text-center max-w-md">
           <div className="w-24 h-24 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-6 text-charcoal-900 text-4xl">
             ✅
           </div>
@@ -56,7 +55,7 @@ export default function BookConsultation() {
             <Link to="/products" className="btn-primary justify-center">Browse Products <FiArrowRight className="w-4 h-4" /></Link>
             <Link to="/" className="btn-secondary justify-center">Back to Home</Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
@@ -99,14 +98,14 @@ export default function BookConsultation() {
               ))}
             </div>
             <div className="bg-beige-200 rounded-full h-1 mb-2">
-              <motion.div className="bg-gold-500 h-1 rounded-full" animate={{ width: `${progress}%` }} transition={{ duration: 0.4 }} />
+              <div className="bg-gold-500 h-1 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
             </div>
             <p className="text-xs text-muted">Step {step} of 4 — {steps[step-1].title}</p>
           </div>
 
           {/* Form Card */}
           <div className="bg-white border border-beige-200 p-8 shadow-card">
-            <motion.div key={step} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
+            <div className="transition-all duration-300">
 
               {step === 1 && (
                 <div className="space-y-5">
@@ -204,7 +203,7 @@ export default function BookConsultation() {
                   <p className="text-muted text-xs leading-relaxed">By submitting, you agree to be contacted by Erto Cucine India for your consultation. We respect your privacy and never share your data.</p>
                 </div>
               )}
-            </motion.div>
+            </div>
 
             {/* Navigation */}
             <div className="flex justify-between mt-8 pt-6 border-t border-beige-200">
@@ -239,3 +238,4 @@ export default function BookConsultation() {
     </>
   );
 }
+

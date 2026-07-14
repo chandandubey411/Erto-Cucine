@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { FiArrowRight, FiPhone } from 'react-icons/fi';
 import { BsWhatsapp } from 'react-icons/bs';
 
@@ -28,11 +27,8 @@ export default function CTA({
       {!dark && <div className="absolute inset-0 bg-beige-100 bg-texture-light" />}
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
+          data-aos="fade-up"
           className="text-center max-w-3xl mx-auto"
         >
           <div className="section-label justify-center mb-4">
@@ -75,8 +71,9 @@ export default function CTA({
               Or WhatsApp us instantly
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
+

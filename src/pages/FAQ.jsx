@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import FAQAccordion from '../components/FAQ/FAQ';
 import CTA from '../components/CTA/CTA';
@@ -53,18 +52,16 @@ export default function FAQ() {
                 const items = faqs.filter(f => f.category === g.cat);
                 if (!items.length) return null;
                 return (
-                  <motion.div
+                  <div
                     key={g.cat}
                     id={g.cat}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    data-aos="fade-up"
                   >
                     <div className="bg-white p-8 border border-beige-200">
                       <h2 className="font-playfair text-xl font-bold text-charcoal-900 mb-6">{g.label}</h2>
                       <FAQAccordion faqs={items} title="" />
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -76,3 +73,4 @@ export default function FAQ() {
     </>
   );
 }
+

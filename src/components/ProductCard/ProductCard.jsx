@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { FiArrowRight, FiStar } from 'react-icons/fi';
 import { formatPrice } from '../../data/products';
 
@@ -9,11 +8,9 @@ export default function ProductCard({ product, index = 0 }) {
     : 0;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.07, duration: 0.5, ease: 'easeOut' }}
+    <div
+      data-aos="fade-up"
+      data-aos-delay={index * 70}
       className="group product-card"
     >
       <Link to={`/products/${product.slug}`}>
@@ -92,6 +89,7 @@ export default function ProductCard({ product, index = 0 }) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
+

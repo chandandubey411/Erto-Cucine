@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FiArrowRight } from 'react-icons/fi';
 import CTA from '../components/CTA/CTA';
@@ -83,15 +82,12 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Masonry Grid */}
           <div className="masonry-grid">
             {filtered.map((img, i) => (
-              <motion.div
+              <div
                 key={`${active}-${i}`}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: i * 0.04 }}
+                data-aos="fade-up"
+                data-aos-delay={(i % 3) * 60}
                 className="masonry-item group cursor-pointer"
                 onClick={() => setLightbox(img)}
               >
@@ -115,8 +111,7 @@ export default function Gallery() {
                     <span className="text-[10px] font-semibold text-gold-600 uppercase tracking-wider flex-shrink-0 ml-2">{img.cat}</span>
                   </div>
                 </div>
-
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -126,11 +121,11 @@ export default function Gallery() {
       {/* Lightbox */}
       {lightbox && (
         <div className="fixed inset-0 z-[80] bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
-          <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="relative max-w-4xl w-full">
+          <div className="relative max-w-4xl w-full">
             <img src={lightbox.src} alt={lightbox.label} className="w-full max-h-[80vh] object-contain rounded-2xl" />
             <p className="text-white text-center mt-4 font-playfair text-xl">{lightbox.label}</p>
             <button onClick={() => setLightbox(null)} className="absolute -top-4 -right-4 w-10 h-10 bg-gold-500 text-charcoal-900 text-xl font-bold flex items-center justify-center hover:bg-gold-400 rounded-full">×</button>
-          </motion.div>
+          </div>
         </div>
       )}
 

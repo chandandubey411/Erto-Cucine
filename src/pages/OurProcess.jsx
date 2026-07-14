@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
@@ -48,12 +47,10 @@ export default function OurProcess() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((s, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 6) * 0.1, duration: 0.5 }}
+                data-aos="fade-up"
+                data-aos-delay={(i % 3) * 100}
                 className={`${s.color} p-8 border border-beige-200 relative overflow-hidden group hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1`}
               >
                 <div className="absolute top-4 right-4 text-gold-200 font-playfair text-5xl font-bold opacity-30">
@@ -66,7 +63,7 @@ export default function OurProcess() {
                 <h3 className="font-playfair text-xl font-bold text-charcoal-900 mb-3">{s.title}</h3>
                 <div className="gold-divider mb-4" />
                 <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -88,3 +85,4 @@ export default function OurProcess() {
     </>
   );
 }
+

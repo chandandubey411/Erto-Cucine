@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import ReviewCard from '../components/ReviewCard/ReviewCard';

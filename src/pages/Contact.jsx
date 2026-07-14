@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiArrowRight } from 'react-icons/fi';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -105,11 +104,11 @@ export default function Contact() {
                 <h2 className="font-playfair text-2xl font-bold text-charcoal-900 mb-6">Send Us a Message</h2>
 
                 {sent ? (
-                  <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-16">
+                  <div className="text-center py-16">
                     <div className="text-5xl mb-4">✅</div>
                     <h3 className="font-playfair text-2xl font-bold text-green-700 mb-2">Message Sent!</h3>
                     <p className="text-muted text-sm">We'll get back to you within 24 hours. Thank you!</p>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

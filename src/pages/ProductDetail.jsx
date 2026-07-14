@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import {
   FiCheck, FiArrowRight, FiDownload, FiPhone, FiStar, FiChevronLeft, FiChevronRight,

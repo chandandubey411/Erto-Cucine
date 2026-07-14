@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
-import { motion } from 'framer-motion';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import CTA from '../components/CTA/CTA';
 import brands from '../data/brands';
@@ -32,12 +31,10 @@ export default function Brands() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {brands.map((brand, i) => (
-              <motion.div
+              <div
                 key={brand.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className="bg-white border border-beige-200 p-8 text-center hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
               >
                 <div className="h-16 flex items-center justify-center mb-5">
@@ -49,7 +46,7 @@ export default function Brands() {
                   {brand.category}
                 </div>
                 <p className="text-muted text-sm leading-relaxed">{brand.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -69,3 +66,4 @@ export default function Brands() {
     </>
   );
 }
+

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiCalendar, FiUser } from 'react-icons/fi';
@@ -27,7 +26,7 @@ export default function Blogs() {
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
 
           {/* Featured Post */}
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group mb-12">
+          <div data-aos="fade-up" className="group mb-12">
             <Link to={`/blogs/${featured.slug}`}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative h-72 lg:h-96 overflow-hidden">
@@ -51,17 +50,15 @@ export default function Blogs() {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map((blog, i) => (
-              <motion.article
+              <article
                 key={blog.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className="group bg-white border border-beige-200 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500"
               >
                 <Link to={`/blogs/${blog.slug}`}>
@@ -80,7 +77,7 @@ export default function Blogs() {
                     </div>
                   </div>
                 </Link>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -88,3 +85,4 @@ export default function Blogs() {
     </>
   );
 }
+

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -53,16 +52,15 @@ const megaData = {
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80';
 
-export default function MegaMenu() {
+export default function MegaMenu({ open }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -12 }}
-      transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[960px] bg-white shadow-luxury border-t-2 border-gold-500 z-50"
+    <div
+      className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 w-[960px] bg-white shadow-luxury border-t-2 border-gold-500 z-50 transition-all duration-300 origin-top ${
+        open ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+      }`}
       style={{ transformOrigin: 'top center' }}
     >
+
       <div className="grid grid-cols-5 gap-0">
         {/* 4 Columns */}
         <div className="col-span-4 grid grid-cols-4 p-8 gap-8">
@@ -116,6 +114,6 @@ export default function MegaMenu() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

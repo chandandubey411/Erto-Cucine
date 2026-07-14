@@ -1,14 +1,11 @@
-import { motion } from 'framer-motion';
 import { FiStar } from 'react-icons/fi';
 import { BsQuote } from 'react-icons/bs';
 
 export default function ReviewCard({ review, index = 0 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
+    <div
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
       className="bg-white border border-beige-200 p-8 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 relative overflow-hidden"
     >
       {/* Quote icon */}
@@ -43,6 +40,7 @@ export default function ReviewCard({ review, index = 0 }) {
           <p className="text-muted text-xs">{review.role} · {review.location}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
+

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiArrowRight, FiPlay } from 'react-icons/fi';
 import { BsWhatsapp } from 'react-icons/bs';
 import { Helmet } from 'react-helmet-async';
@@ -104,10 +103,6 @@ const processSteps = [
 ];
 
 export default function Home() {
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
-  const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-
   const featuredProducts = [...slidingWardrobes.slice(0, 3), ...modularKitchens.slice(0, 3)];
   const trendingProducts = allProducts.filter(p => p.badge).slice(0, 8);
 
@@ -119,8 +114,8 @@ export default function Home() {
       </Helmet>
 
       {/* ===== HERO ===== */}
-      <section ref={heroRef} className="relative h-screen min-h-[600px] overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroY }}>
+      <section className="relative h-screen min-h-[600px] overflow-hidden">
+        <div className="absolute inset-0">
           <Swiper
             modules={[Autoplay, Pagination, EffectFade]}
             effect="fade"
@@ -141,10 +136,9 @@ export default function Home() {
                   {/* Slide content */}
                   <div className="absolute inset-0 flex items-center">
                     <div className="max-w-[1400px] mx-auto px-4 lg:px-8 w-full">
-                      <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                      <div
+                        data-aos="fade-right"
+                        data-aos-delay="200"
                         className="max-w-2xl"
                       >
                         <p className="section-label text-gold-400 mb-6">{slide.label}</p>
@@ -162,14 +156,14 @@ export default function Home() {
                             Explore Products
                           </Link>
                         </div>
-                      </motion.div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </motion.div>
+        </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
@@ -278,12 +272,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
             {galleryImgs.map((img, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className={`group relative overflow-hidden ${img.span} ${i === 0 || i === 3 ? 'md:row-span-2' : ''}`}
               >
                 <div className={`relative overflow-hidden ${i === 0 || i === 3 ? 'h-full min-h-[400px]' : 'h-48 lg:h-56'}`}>
@@ -299,7 +291,7 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -342,12 +334,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-4">
             {processSteps.map((step, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className="text-center group"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-gold-500/30 group-hover:border-gold-500 flex items-center justify-center text-gold-400 font-playfair text-xl font-bold transition-colors">
@@ -356,7 +346,7 @@ export default function Home() {
                 <div className="w-px h-4 bg-gold-500/30 mx-auto mb-3 hidden lg:block" />
                 <h3 className="text-white font-semibold text-sm mb-1">{step.label}</h3>
                 <p className="text-white/50 text-xs">{step.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -376,18 +366,16 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-4 md:grid-cols-8 gap-6 items-center">
             {brands.map((b) => (
-              <motion.div
+              <div
                 key={b.id}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                data-aos="fade"
                 className="flex items-center justify-center opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
               >
                 <div className="text-center">
                   <p className="font-playfair text-sm font-bold text-charcoal-700 whitespace-nowrap">{b.name}</p>
                   <p className="text-[10px] text-muted">{b.category}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

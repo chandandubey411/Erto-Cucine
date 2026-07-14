@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 
 export default function CategoryCard({ category, index = 0 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.5 }}
+    <div
+      data-aos="fade-up"
+      data-aos-delay={index * 80}
       className="group relative overflow-hidden rounded-none cursor-pointer"
     >
       <Link to={`/products?cat=${category.slug}`}>
@@ -43,6 +40,7 @@ export default function CategoryCard({ category, index = 0 }) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
+
