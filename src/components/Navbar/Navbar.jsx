@@ -27,6 +27,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const megaTimeout = useRef(null);
   const location = useLocation();
@@ -43,6 +44,7 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
     setMegaOpen(false);
+    setMobileServicesOpen(false);
   }, [location]);
 
   const handleMegaEnter = () => {
@@ -192,25 +194,39 @@ export default function Navbar() {
           <div className="flex flex-col gap-1">
             {navLinks.map((link) =>
               link.hasMega ? (
-                <div key="services-mobile">
-                  <p className="text-xs uppercase tracking-widest text-muted font-semibold mt-6 mb-3">Services</p>
-                  <div className="grid grid-cols-1 gap-2">
-                    {[
-                      ['Modular Kitchens', '/modular-kitchen'],
-                      ['Sliding Wardrobes', '/products?cat=sliding-wardrobes'],
-                      ['Hinged Wardrobes', '/products?cat=hinged-wardrobes'],
-                      ['Walk-In Wardrobes', '/products?cat=walk-in-wardrobes'],
-                      ['TV Units', '/products?cat=tv-units'],
-                      ['Bathroom Vanity', '/products?cat=bathroom-vanity'],
-                    ].map(([label, to]) => (
-                      <Link
-                        key={to}
-                        to={to}
-                        className="px-4 py-3 bg-charcoal-800 rounded text-sm hover:bg-gold-500 hover:text-charcoal-900 transition-colors"
-                      >
-                        {label}
-                      </Link>
-                    ))}
+                <div key="services-mobile" className="border-b border-charcoal-700">
+                  <button
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="flex items-center justify-between w-full text-xl font-playfair py-3 hover:text-gold-400 transition-colors text-left"
+                  >
+                    <span>Services</span>
+                    <FiChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180 text-gold-400' : 'text-white'}`} />
+                  </button>
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
+                      mobileServicesOpen ? 'grid-rows-[1fr] opacity-100 mb-4' : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="grid grid-cols-1 gap-2 pt-2 pb-1">
+                        {[
+                          ['Modular Kitchens', '/modular-kitchen'],
+                          ['Sliding Wardrobes', '/products?cat=sliding-wardrobes'],
+                          ['Hinged Wardrobes', '/products?cat=hinged-wardrobes'],
+                          ['Walk-In Wardrobes', '/products?cat=walk-in-wardrobes'],
+                          ['TV Units', '/products?cat=tv-units'],
+                          ['Bathroom Vanity', '/products?cat=bathroom-vanity'],
+                        ].map(([label, to]) => (
+                          <Link
+                            key={to}
+                            to={to}
+                            className="px-4 py-3 bg-charcoal-800 rounded text-sm hover:bg-gold-500 hover:text-charcoal-900 transition-colors block"
+                          >
+                            {label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ) : (
