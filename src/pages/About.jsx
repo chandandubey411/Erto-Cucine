@@ -14,12 +14,6 @@ const timeline = [
   { year: '2024', title: '5,000+ Families', desc: 'Today we\'ve transformed over 5,000 homes across Delhi, Noida, Greater Noida & Gurugram.' },
 ];
 
-const team = [
-  { name: 'Rajesh Kumar', role: 'Founder & CEO', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80' },
-  { name: 'Priya Sharma', role: 'Head of Design', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80' },
-  { name: 'Amit Verma', role: 'Head of Manufacturing', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
-  { name: 'Sunita Nair', role: 'Client Relations', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80' },
-];
 
 const stats = [
   { value: 5000, suffix: '+', label: 'Homes Transformed' },
@@ -186,28 +180,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="section-label justify-center">The People Behind</p>
-            <h2 className="section-title">Meet Our Team</h2>
-            <div className="gold-divider mx-auto" />
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="text-center group">
-                <div className="relative mb-4 overflow-hidden">
-                  <img src={member.img} alt={member.name} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gold-500/0 group-hover:bg-gold-500/10 transition-all duration-300" />
-                </div>
-                <h3 className="font-playfair text-lg font-semibold text-charcoal-900">{member.name}</h3>
-                <p className="text-muted text-sm">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTA />
     </>
