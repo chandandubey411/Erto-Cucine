@@ -194,7 +194,7 @@ export default function Navbar() {
               link.hasMega ? (
                 <div key="services-mobile">
                   <p className="text-xs uppercase tracking-widest text-muted font-semibold mt-6 mb-3">Services</p>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 gap-2">
                     {[
                       ['Modular Kitchens', '/modular-kitchen'],
                       ['Sliding Wardrobes', '/products?cat=sliding-wardrobes'],
