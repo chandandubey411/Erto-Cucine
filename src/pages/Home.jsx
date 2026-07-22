@@ -47,7 +47,7 @@ const heroSlides = [
 const stats = [
   { value: 5000, suffix: '+', label: 'Happy Families' },
   { value: 15, suffix: '+', label: 'Years Experience' },
-  { value: 180, suffix: '+', label: 'Premium Products' },
+  { value: allProducts.length, suffix: '+', label: 'Premium Products' },
   { value: 10, suffix: ' Yr', label: 'Structural Warranty' },
 ];
 

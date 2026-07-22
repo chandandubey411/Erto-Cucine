@@ -67,7 +67,7 @@ export default function Products() {
     <>
       <Helmet>
         <title>{selectedCat ? `${selectedCat.name} — ` : ''}All Products | Erto Cucine India</title>
-        <meta name="description" content="Browse 180+ premium modular wardrobes, kitchens, TV units, vanities, and luxury furniture from Erto Cucine India." />
+        <meta name="description" content="Browse 45+ premium modular wardrobes, kitchens, TV units, vanities, and luxury furniture from Erto Cucine India." />
       </Helmet>
 
       {/* Page Hero */}

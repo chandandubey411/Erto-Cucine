@@ -6,45 +6,45 @@ import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 
 const galleryImages = [
   // Kitchen
-  { src: 'https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'White Marble Island Kitchen' },
-  { src: 'https://images.pexels.com/photos/3935350/pexels-photo-3935350.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Modern Grey Kitchen' },
-  { src: 'https://images.pexels.com/photos/6489103/pexels-photo-6489103.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Open Concept Kitchen' },
-  { src: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Luxury Pendant Kitchen' },
-  { src: 'https://images.pexels.com/photos/6314342/pexels-photo-6314342.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Beige Handleless Kitchen' },
-  { src: 'https://images.pexels.com/photos/6585758/pexels-photo-6585758.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Contemporary Kitchen Design' },
+  { src: 'https://i.pinimg.com/1200x/83/45/74/834574df7a3ec5bfa9d0e925496a226c.jpg', cat: 'Kitchen', label: 'White Marble Island Kitchen' },
+  { src: 'https://i.pinimg.com/736x/d3/e8/e0/d3e8e02b23dd47caed4f57d8333ede2b.jpg', cat: 'Kitchen', label: 'Modern Grey Kitchen' },
+  { src: 'https://i.pinimg.com/1200x/35/76/11/35761137a5e9c7873f6dd1a8cac3f999.jpg', cat: 'Kitchen', label: 'Open Concept Kitchen' },
+  { src: 'https://i.pinimg.com/736x/ca/b4/5c/cab45c7c4af985c9eef84af2e179adcd.jpg', cat: 'Kitchen', label: 'Luxury Pendant Kitchen' },
+  { src: 'https://i.pinimg.com/736x/c7/38/df/c738df757f48f5a9a22cd6115ba4ef8f.jpg', cat: 'Kitchen', label: 'Beige Handleless Kitchen' },
+  { src: 'https://i.pinimg.com/736x/1a/0b/78/1a0b78c951a780a08ce448fcaa7028f6.jpg', cat: 'Kitchen', label: 'Contemporary Kitchen Design' },
 
   // Wardrobes
-  { src: 'https://images.pexels.com/photos/6585601/pexels-photo-6585601.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Wardrobes', label: 'Walk-In Wardrobe' },
-  { src: 'https://images.pexels.com/photos/6186812/pexels-photo-6186812.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Wardrobes', label: 'Sliding Wardrobe Interior' },
-  { src: 'https://images.pexels.com/photos/7534561/pexels-photo-7534561.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Wardrobes', label: 'Built-In Wardrobe' },
-  { src: 'https://images.pexels.com/photos/6489111/pexels-photo-6489111.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Wardrobes', label: 'Luxury Walk-In Closet' },
+  { src: 'https://i.pinimg.com/736x/04/fc/ef/04fcefeff745e3df092dc840bdb49783.jpg', cat: 'Wardrobes', label: 'Walk-In Wardrobe' },
+  { src: 'https://i.pinimg.com/1200x/67/72/b6/6772b6f8d4cc97f0aa88a305a9e266e5.jpg', cat: 'Wardrobes', label: 'Sliding Wardrobe Interior' },
+  { src: 'https://i.pinimg.com/736x/25/a6/ee/25a6ee1ecceb26f823ea5e0c39cfaf68.jpg', cat: 'Wardrobes', label: 'Built-In Wardrobe' },
+  { src: 'https://i.pinimg.com/736x/1b/0e/98/1b0e98940e2e8655f5cea811b803363b.jpg', cat: 'Wardrobes', label: 'Luxury Walk-In Closet' },
 
   // Bathroom Vanity
-  { src: 'https://images.pexels.com/photos/6585756/pexels-photo-6585756.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Vanity', label: 'Floating Bathroom Vanity' },
-  { src: 'https://images.pexels.com/photos/6186811/pexels-photo-6186811.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Vanity', label: 'Double Sink Vanity' },
-  { src: 'https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Vanity', label: 'Luxury Bathroom' },
-  { src: 'https://images.pexels.com/photos/6585604/pexels-photo-6585604.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Vanity', label: 'Modern Bathroom Vanity' },
+  { src: 'https://i.pinimg.com/736x/c8/2d/f1/c82df1f92074055b10945cbecb3ff737.jpg', cat: 'Vanity', label: 'Floating Bathroom Vanity' },
+  { src: 'https://i.pinimg.com/1200x/0b/71/59/0b715949b81cb78693706c987d2ecca8.jpg', cat: 'Vanity', label: 'Double Sink Vanity' },
+  { src: 'https://i.pinimg.com/736x/5d/f3/76/5df376ada20703d5bb94cbb529d21a20.jpg', cat: 'Vanity', label: 'Luxury Bathroom' },
+  { src: 'https://i.pinimg.com/1200x/e4/aa/6e/e4aa6e8387b928feb8fb9101c8d2531c.jpg', cat: 'Vanity', label: 'Modern Bathroom Vanity' },
 
   // Bedroom
-  { src: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Bedroom', label: 'Luxury Master Bedroom' },
-  { src: 'https://images.pexels.com/photos/6782567/pexels-photo-6782567.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Bedroom', label: 'Contemporary Bedroom' },
-  { src: 'https://images.pexels.com/photos/6685062/pexels-photo-6685062.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Bedroom', label: 'Minimal Bedroom Design' },
-  { src: 'https://images.pexels.com/photos/3316924/pexels-photo-3316924.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Bedroom', label: 'Cosy Guest Bedroom' },
+  { src: 'https://i.pinimg.com/736x/0a/fc/0e/0afc0ec3095c5f2f8eef4eb23f382425.jpg', cat: 'Bedroom', label: 'Luxury Master Bedroom' },
+  { src: 'https://i.pinimg.com/736x/eb/76/57/eb7657f6d9b64ee13acc7419f99e0a4d.jpg', cat: 'Bedroom', label: 'Contemporary Bedroom' },
+  { src: 'https://i.pinimg.com/736x/7e/4d/61/7e4d6180d76735555cd4741e2df5f553.jpg', cat: 'Bedroom', label: 'Minimal Bedroom Design' },
+  { src: 'https://i.pinimg.com/1200x/4f/2a/3e/4f2a3ef0b33a03763e989beec1645f26.jpg', cat: 'Bedroom', label: 'Cosy Guest Bedroom' },
 
   // Living Room
-  { src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Living Room', label: 'Open Plan Living Room' },
-  { src: 'https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Living Room', label: 'Modern Living Area' },
-  { src: 'https://images.pexels.com/photos/6489142/pexels-photo-6489142.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Living Room', label: 'Luxury Living Space' },
+  { src: 'https://i.pinimg.com/736x/ae/ac/3e/aeac3ea759cc35792286ffab3946bdc4.jpg', cat: 'Living Room', label: 'Open Plan Living Room' },
+  { src: 'https://i.pinimg.com/1200x/4f/aa/63/4faa636775399a5396c4d7f3823aa0d1.jpg', cat: 'Living Room', label: 'Modern Living Area' },
+  { src: 'https://i.pinimg.com/1200x/0d/37/f9/0d37f9116388a6b2640baf4768c7c8ef.jpg', cat: 'Living Room', label: 'Luxury Living Space' },
 
   // TV Units
-  { src: 'https://images.pexels.com/photos/6782354/pexels-photo-6782354.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'TV Units', label: 'Floating TV Unit' },
-  { src: 'https://images.pexels.com/photos/7045728/pexels-photo-7045728.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'TV Units', label: 'Wall-Mounted TV Panel' },
-  { src: 'https://images.pexels.com/photos/6585596/pexels-photo-6585596.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'TV Units', label: 'Entertainment Unit' },
+  { src: 'https://i.pinimg.com/736x/ca/f3/6c/caf36c6e9f567a0799b0770cf904cd7c.jpg', cat: 'TV Units', label: 'Floating TV Unit' },
+  { src: 'https://i.pinimg.com/736x/e6/25/d6/e625d65e60270cd38866b0b863e41345.jpg', cat: 'TV Units', label: 'Wall-Mounted TV Panel' },
+  { src: 'https://i.pinimg.com/736x/01/3b/d9/013bd94ad8f0e03b801867d35b09385c.jpg', cat: 'TV Units', label: 'Entertainment Unit' },
 
   // Additional
-  { src: 'https://images.pexels.com/photos/6710527/pexels-photo-6710527.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Kitchen', label: 'Dark Luxury Kitchen' },
-  { src: 'https://images.pexels.com/photos/7045696/pexels-photo-7045696.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Bedroom', label: 'Premium Bedroom Suite' },
-  { src: 'https://images.pexels.com/photos/6489086/pexels-photo-6489086.jpeg?auto=compress&cs=tinysrgb&w=800', cat: 'Vanity', label: 'Spa-Style Bathroom' },
+  { src: 'https://i.pinimg.com/1200x/10/24/5d/10245da100c365bdc3e76b8d023ae586.jpg', cat: 'Kitchen', label: 'Dark Luxury Kitchen' },
+  { src: 'https://i.pinimg.com/736x/91/ca/7e/91ca7eecfea0142a5144cd674c6b424d.jpg', cat: 'Bedroom', label: 'Premium Bedroom Suite' },
+  { src: 'https://i.pinimg.com/1200x/a3/23/00/a32300796dbd6440e231a31360e5d376.jpg', cat: 'Vanity', label: 'Spa-Style Bathroom' },
 ];
 
 const cats = ['All', 'Kitchen', 'Wardrobes', 'Bedroom', 'Living Room', 'TV Units', 'Vanity'];
